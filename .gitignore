@@ -1,0 +1,57 @@
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Database & local state
+*.db
+*.sqlite
+*.sqlite3
+llc_ledger.db
+
+# Logs & temp files
+*.log
+*.err
+pip-install.log
+pip-install.err
+
+# Environment secrets
+.env
+.env.local
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Antigravity CLI artifacts
+.antigravitycli/

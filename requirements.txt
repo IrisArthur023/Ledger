@@ -1,0 +1,45 @@
+# -----------------------------------------------------------------------------
+# SME Money Book — Backend requirements
+# Install with: pip install -r requirements.txt
+# -----------------------------------------------------------------------------
+
+
+    # --- Core framework ---
+fastapi>=0.115
+uvicorn[standard]>=0.32  # ASGI server
+pydantic>=2.9  # data validation (ships with FastAPI, pinned explicitly)
+pydantic-settings>=2.5  # typed environment/config loading
+python-dotenv>=1.0  # load .env files in local dev
+
+    # --- Database (Postgres) ---
+sqlalchemy>=2.0
+asyncpg>=0.29  # async Postgres driver
+aiosqlite>=0.20  # async SQLite driver for dev/testing
+greenlet>=3.0  # required for SQLAlchemy asyncio
+alembic>=1.13  # database migrations
+
+    # --- Supabase (if used as your managed Postgres/auth/storage layer) ---
+supabase>=2.9
+
+    # --- Auth ---
+python-jose[cryptography]>=3.3  # JWT creation/verification
+passlib[bcrypt]>=1.7  # only needed if you support password-based login alongside OTP
+
+    # --- HTTP client (for Paystack, mobile money APIs, FX rates, etc.) ---
+httpx>=0.27
+
+    # --- File uploads (receipt photos, etc.) ---
+python-multipart>=0.0.12
+
+    # --- AI features (Phase 2+: transaction classification, forecasting) ---
+anthropic>=0.36  # Claude API client
+pandas>=2.2  # data wrangling for forecasting/classification
+scikit-learn>=1.5  # once you move from prompting to a trained classifier
+
+    # --- Testing & code quality (dev-time only — consider a separate requirements-dev.txt) ---
+pytest>=8.3
+pytest-asyncio>=0.24
+black>=24.8
+ruff>=0.6
+mypy>=1.11
+ 
