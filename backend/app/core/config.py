@@ -20,6 +20,13 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 days
     REFRESH_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 30  # 30 days
     
+    # Auth0
+    AUTH0_DOMAIN: Optional[str] = None
+    AUTH0_CLIENT_ID: Optional[str] = None
+    AUTH0_CLIENT_SECRET: Optional[str] = None
+    AUTH0_SECRET: Optional[str] = None       # 64-char hex used to sign session cookies
+    APP_BASE_URL: str = "http://localhost:8000"
+
     # Integration & Third Party Secrets (from environment variables)
     SUPABASE_URL: Optional[str] = None
     SUPABASE_KEY: Optional[str] = None

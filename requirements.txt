@@ -24,6 +24,7 @@ supabase>=2.9
     # --- Auth ---
 python-jose[cryptography]>=3.3  # JWT creation/verification
 passlib[bcrypt]>=1.7  # only needed if you support password-based login alongside OTP
+auth0-server-python>=0.1.0  # Auth0 server-side SDK
 
     # --- HTTP client (for Paystack, mobile money APIs, FX rates, etc.) ---
 httpx>=0.27
